@@ -37,16 +37,28 @@ export const Buttons = styled.div`
   display: flex;
   gap: 20px;
 
+  :nth-child(1) {
+    color: green;
+    &:hover {
+      background-color: darkgreen;
+      color: white;
+    }
+  }
+
   :nth-child(2) {
     color: rebeccapurple;
+    &:hover {
+      background-color: chocolate;
+      color: white;
+    }
   }
 
   :nth-child(3) {
     color: red;
-  }
-
-  :nth-child(1) {
-    color: green;
+    &:hover {
+      background-color: red;
+      color: white;
+    }
   }
 
   button {
@@ -57,6 +69,7 @@ export const Buttons = styled.div`
 
     border: none;
     border-radius: 8px;
+    cursor: pointer;
   }
 `;
 
@@ -68,10 +81,16 @@ export const SelectContainer = styled.div`
 
   select {
     border: 1px solid #999;
+
     font-size: 18px;
+
     color: #1c87c9;
     background-color: #eee;
+
     border-radius: 5px;
+
     box-shadow: 4px 4px #ccc;
+
+    cursor: pointer;
   }
 `;
