@@ -1,10 +1,10 @@
 import { useRef, useState } from "react";
 import {
-  AppContainer,
   Buttons,
   SelectContainer,
   Time,
   TimeTitle,
+  TimerContainer,
   Title,
 } from "./styles";
 
@@ -14,8 +14,10 @@ function Timer() {
   const [title, setTitle] = useState("Let's Begin!!!");
   const [timerRunning, setTimerRunning] = useState(false);
 
-  const minutes = Math.floor(timeLeft / 60);
-  const seconds = (timeLeft - minutes * 60).toString().padStart(2, "0");
+  const minutes = Math.floor(timeLeft / 60)
+    .toString()
+    .padStart(2, "0");
+  const seconds = (timeLeft - +minutes * 60).toString().padStart(2, "0");
 
   const timeLeftRef = useRef<number | undefined>();
 
@@ -55,7 +57,7 @@ function Timer() {
   const numbers = Array.from(Array(15).keys()).map((num) => num + 1);
 
   return (
-    <AppContainer>
+    <TimerContainer>
       <SelectContainer>
         <TimeTitle>Choose the Time!</TimeTitle>
         <select
@@ -88,7 +90,7 @@ function Timer() {
           Reset
         </button>
       </Buttons>
-    </AppContainer>
+    </TimerContainer>
   );
 }
 

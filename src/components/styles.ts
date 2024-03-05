@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const AppContainer = styled.div`
-  min-width: 375px;
+export const TimerContainer = styled.div`
+  min-width: 350px;
 
   display: flex;
   flex-direction: column;
@@ -20,6 +20,8 @@ export const TimeTitle = styled.h3`
 export const Title = styled.h1`
   text-align: center;
   font-size: 2.4rem;
+
+  color: lightseagreen;
 `;
 
 export const Time = styled.div`
@@ -27,11 +29,25 @@ export const Time = styled.div`
   gap: 2px;
 
   font-size: 3.4rem;
+
+  color: brown;
 `;
 
 export const Buttons = styled.div`
   display: flex;
   gap: 20px;
+
+  :nth-child(2) {
+    color: rebeccapurple;
+  }
+
+  :nth-child(3) {
+    color: red;
+  }
+
+  :nth-child(1) {
+    color: green;
+  }
 
   button {
     font-size: 1.6rem;
